@@ -4,7 +4,6 @@
 $(document).ready(function () {
     let audioUrls = ["https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3","https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_chat.mp3"];
     let currentAudioIndex = 0;
-
     let audioElement = $("<audio>").attr("src", audioUrls[currentAudioIndex]).attr("autoplay", true);
     let played = false; //初始状态
     let timer;
@@ -37,7 +36,7 @@ $(document).ready(function () {
                 played = true;
                 audio.play();
             }
-        }, 10000); // 300000ms（5min）不动就播放
+        }, 300000); // 300000ms（5min）不动就播放
     }
 
     function resetTimer() {
