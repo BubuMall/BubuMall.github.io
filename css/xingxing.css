@@ -8,6 +8,7 @@ a,
 button,
 image,
 img,
+.site-page,
 a:hover {
-    cursor: url(./mouse/STMC_GenshinNahida_13_Hand\(alternative\).cur), default;
+    cursor: url(./mouse/STMC_GenshinNahida_13_Hand\(alternative\).cur), default !important;
 }
