@@ -1,0 +1,13 @@
+/* 鼠标样式 */
+html,
+body {
+    cursor: url(./mouse/STMC_GenshinNahida_01_Normal\(alternative\).cur), default;
+}
+
+a,
+button,
+image,
+img,
+a:hover {
+    cursor: url(./mouse/STMC_GenshinNahida_13_Hand\(alternative\).cur), default;
+}
