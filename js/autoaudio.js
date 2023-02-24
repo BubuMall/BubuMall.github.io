@@ -1,56 +1,66 @@
-// 自动播放声音
-
-
 $(document).ready(function () {
-    let audioUrls = ["https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3","https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_chat.mp3"];
-    let currentAudioIndex = 0;
-    let audioElement = $("<audio>").attr("src", audioUrls[currentAudioIndex]).attr("autoplay", true);
-    let played = false; //初始状态
-    let timer;
-    let audio = audioElement[0];
+  // 获取音频对象
+  const audioElement = $("<audio>")
+    .addClass("nahida")
+    .css("display", "none")
+    .append(
+      $("<source>")
+        .attr(
+          "src",
+          "https://cdn.jsdelivr.net/gh/BubuMall/Image/nihida_wait.mp3"
+        )
+        .attr("type", "audio/mpeg")
+    );
+  // .insertAfter('header');
+  $("header").after(audioElement);
 
-    $("header").after(audioElement);
+  var audio = $(".nahida")[0];
 
-    function playAudio(){
-        if (audio.paused) {
-            audio.play();
-            played = true
-        } else {
-            audio.pause();
-            played = false
-            currentAudioIndex = (currentAudioIndex + 1) % audioUrls.length;
-        }
+  // 定义音频链接数组和索引
+  var audioLinks = [
+    "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3",
+    "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_chat.mp3",
+    "https://cdn.jsdelivr.net/gh/BubuMall/Image/nihida_wait.mp3",
+  ];
+  var audioIndex = 0;
+
+  // 点击 header 播放/暂停音频
+  $("header").on("click", function () {
+    if (audio.paused) {
+      audio.play(); // 播放音频
+      audio.addEventListener("ended", (e) => {
+        // 监听音频播放完毕事件，播放下一个音频链接
+        playNext();
+      });
+    } else {
+      audio.pause(); // 暂停音频
     }
-    //   点击切换播放状态
-    $("header").click(function () {
-        playAudio()
-    });
-    //适配移动端
-    $("header").on("touchstart click",(function () {
-        playAudio()
-    }));
+  });
 
-    function startTimer() {
-        timer = setTimeout(function () {
-            if (!played) {
-                played = true;
-                audio.play();
-            }
-        }, 300000); // 300000ms（5min）不动就播放
-    }
+  // 定义播放下一个音频链接函数
+  function playNext() {
+    // 索引加 1，并对链接数量取余，实现循环播放
+    audioIndex = (audioIndex + 1) % audioLinks.length;
 
-    function resetTimer() {
-        clearTimeout(timer);
-        played = false;
-        audio.pause();
-    }
+    // 切换到下一个音频链接，并自动播放
+    audio.src = audioLinks[audioIndex];
+    // audio.play();
+  }
 
-    //   鼠标键盘动了就重新计时
-    $(document).on("mousemove keydown", function () {
-        resetTimer();
-        startTimer();
+  // 绑定鼠标移动事件，计时5分钟后重新播放音频
+  var timeout = null;
+  if (audio.playing) {
+    return;
+  } else {
+    $(document).on("mousemove", function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
         audio.currentTime = 0;
+        playNext();
+        audio.play();
+        timeout = null;
+      }, 360000);
     });
+  }
 
-    startTimer();
 });

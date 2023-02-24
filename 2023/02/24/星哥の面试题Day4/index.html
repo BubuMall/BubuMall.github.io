@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>星哥の面试题Day4 | 很嗯哼的星</title><meta name="author" content="Peter Qiu"><meta name="copyright" content="Peter Qiu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是 CSS 盒子模型？CSS 盒子模型（CSS box model）指的是用于布局和设计网页的 CSS 样式规范。CSS 盒子模型将每个 HTML 元素表示为一个矩形的盒子，这个盒子包括内容（content）、内边距（padding）、边框（border）和外边距（margin）四个部分。 具体来说，盒子模型中各个部分的含义如下：  内容（content）：元素的实际内容，由 width 和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="星哥の面试题Day4">
+<meta property="og:url" content="http://4399.com/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day4/index.html">
+<meta property="og:site_name" content="很嗯哼的星">
+<meta property="og:description" content="什么是 CSS 盒子模型？CSS 盒子模型（CSS box model）指的是用于布局和设计网页的 CSS 样式规范。CSS 盒子模型将每个 HTML 元素表示为一个矩形的盒子，这个盒子包括内容（content）、内边距（padding）、边框（border）和外边距（margin）四个部分。 具体来说，盒子模型中各个部分的含义如下：  内容（content）：元素的实际内容，由 width 和">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg">
+<meta property="article:published_time" content="2023-02-24T12:04:11.000Z">
+<meta property="article:modified_time" content="2023-02-24T16:04:29.848Z">
+<meta property="article:author" content="Peter Qiu">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="求职">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://4399.com/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Peter Qiu","link":"链接: ","source":"来源: 很嗯哼的星","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '星哥の面试题Day4',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-25 00:04:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/xingxing.css"><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="很嗯哼的星"><span class="site-name">很嗯哼的星</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">星哥の面试题Day4</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-24T12:04:11.000Z" title="发表于 2023-02-24 20:04:11">2023-02-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-24T16:04:29.848Z" title="更新于 2023-02-25 00:04:29">2023-02-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="星哥の面试题Day4"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="什么是-CSS-盒子模型？"><a href="#什么是-CSS-盒子模型？" class="headerlink" title="什么是 CSS 盒子模型？"></a>什么是 CSS 盒子模型？</h2><p>CSS 盒子模型（CSS box model）指的是用于布局和设计网页的 CSS 样式规范。CSS 盒子模型将每个 HTML 元素表示为一个矩形的盒子，这个盒子包括内容（content）、内边距（padding）、边框（border）和外边距（margin）四个部分。</p>
+<p>具体来说，盒子模型中各个部分的含义如下：</p>
+<ul>
+<li>内容（content）：元素的实际内容，由 width 和 height 属性决定。</li>
+<li>内边距（padding）：内容和边框之间的空间，由 padding 属性决定。</li>
+<li>边框（border）：内容和外边距之间的边框，由 border 属性决定。</li>
+<li>外边距（margin）：盒子边缘和其它元素之间的空间，由 margin 属性决定。</li>
+</ul>
+<p>CSS 盒子模型中，盒子的总大小由这四个部分加起来决定，即 width + padding + border + margin。需要注意的是，CSS 盒子模型有两种，分别是标准盒子模型和怪异盒子模型。</p>
+<ul>
+<li>标准盒子模型中，盒子的大小 = width + padding + border + margin</li>
+<li>怪异盒子模型中，盒子的大小 = width + margin，因为 width 已经包含了 padding + border</li>
+</ul>
+<h2 id="ES5-中的类和-ES6-中的-class-有什么区别？"><a href="#ES5-中的类和-ES6-中的-class-有什么区别？" class="headerlink" title="ES5 中的类和 ES6 中的 class 有什么区别？"></a>ES5 中的类和 ES6 中的 class 有什么区别？</h2><p>在 ES5 中，我们通常使用构造函数来创建对象和实现继承，而在 ES6 中，引入了类（class）的概念来简化对象创建和继承的过程。下面是 ES5 中类和 ES6 中的 class 的一些区别：</p>
+<ul>
+<li>语法不同：ES5 中使用构造函数来定义类，而 ES6 中使用 class 关键字来定义类。</li>
+<li>继承方式不同：ES5 中使用原型链继承来实现继承，而 ES6 中使用 extends 关键字和 super 函数来实现继承。</li>
+<li>类方法的定义方式不同：ES5 中类方法定义在构造函数的原型对象上，而 ES6 中类方法定义在类的内部。</li>
+<li>类属性的定义方式不同：ES5 中类属性定义在构造函数的原型对象上，而 ES6 中类属性定义在类的内部，并且需要使用 static 关键字来定义静态属性。</li>
+<li>类的调用方式不同：ES5 中需要使用 new 关键字来创建类的实例，而 ES6 中类的调用方式更加简单，只需要像函数一样调用即可。</li>
+</ul>
+<p>需要注意的是，虽然 ES6 中引入了类的概念，但在底层实现上仍然是基于原型链的。因此，理解原型链继承和类的继承是理解 JavaScript 面向对象编程的关键。</p>
+<h2 id="说说你对-TypeScript-的理解？与-JavaScript-的区别？"><a href="#说说你对-TypeScript-的理解？与-JavaScript-的区别？" class="headerlink" title="说说你对 TypeScript 的理解？与 JavaScript 的区别？"></a>说说你对 TypeScript 的理解？与 JavaScript 的区别？</h2><p>TypeScript是一种开源的编程语言，它是JavaScript的一个超集，支持静态类型、类、接口等特性，并且在编译时进行类型检查。TypeScript的设计目标是提高代码的可维护性和可读性，并且可以在大型项目中提供更好的代码组织和重用。</p>
+<p>相比于JavaScript，TypeScript具有以下特点：</p>
+<ul>
+<li>支持类型：TypeScript支持静态类型，在编译时进行类型检查，能够在代码编写阶段发现类型错误，减少运行时错误。</li>
+<li>支持面向对象编程：TypeScript支持类、接口、泛型等面向对象编程特性，可以更好地组织代码和重用代码。</li>
+<li>支持ES6+特性：TypeScript支持ES6+的语法和特性，可以使用最新的语言特性来提高代码质量和可读性。</li>
+<li>更好的编辑器支持：TypeScript 提供了更好的编辑器支持，包括类型检查、代码补全、重构等功能，可以提高开发效率。</li>
+<li>更好的可维护性：TypeScript 的类型系统和面向对象特性可以提高代码的可维护性和可读性，使得代码更加易于维护和扩展。</li>
+</ul>
+<p>总之，TypeScript 可以看作是 JavaScript 的一个超集，它扩展了 JavaScript 的功能，提供了更好的类型检查和面向对象编程特性，可以提高代码的可维护性和可读性。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://4399.com">Peter Qiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://4399.com/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day4/">http://4399.com/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://4399.com" target="_blank">很嗯哼的星</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a><a class="post-meta__tags" href="/tags/%E6%B1%82%E8%81%8C/">求职</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day5/" title="星哥の面试题Day5"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">星哥の面试题Day5</div></div></a></div><div class="next-post pull-right"><a href="/2023/02/23/Picgo-Github%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/" title="Picgo+Github配置图床"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Picgo+Github配置图床</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day1/" title="星哥の面试题Day1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-22</div><div class="title">星哥の面试题Day1</div></div></a></div><div><a href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day2/" title="星哥の面试题Day2"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-22</div><div class="title">星哥の面试题Day2</div></div></a></div><div><a href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day3/" title="星哥の面试题Day3"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-22</div><div class="title">星哥の面试题Day3</div></div></a></div><div><a href="/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day5/" title="星哥の面试题Day5"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-24</div><div class="title">星哥の面试题Day5</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Peter Qiu</div><div class="author-info__description">true</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/whatqiu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn"></i><span>公告</span></div><div class="announcement_content">有大家在,伤口就不会痛</div><timing></timing></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是 CSS 盒子模型？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES5-%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%92%8C-ES6-%E4%B8%AD%E7%9A%84-class-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">ES5 中的类和 ES6 中的 class 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9-TypeScript-%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F%E4%B8%8E-JavaScript-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">说说你对 TypeScript 的理解？与 JavaScript 的区别？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day5/" title="星哥の面试题Day5">星哥の面试题Day5</a><time datetime="2023-02-24T12:04:41.000Z" title="发表于 2023-02-24 20:04:41">2023-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/24/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day4/" title="星哥の面试题Day4">星哥の面试题Day4</a><time datetime="2023-02-24T12:04:11.000Z" title="发表于 2023-02-24 20:04:11">2023-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/23/Picgo-Github%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A/" title="Picgo+Github配置图床">Picgo+Github配置图床</a><time datetime="2023-02-23T05:22:37.000Z" title="发表于 2023-02-23 13:22:37">2023-02-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day3/" title="星哥の面试题Day3">星哥の面试题Day3</a><time datetime="2023-02-22T01:33:36.000Z" title="发表于 2023-02-22 09:33:36">2023-02-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day2/" title="星哥の面试题Day2">星哥の面试题Day2</a><time datetime="2023-02-22T01:33:26.000Z" title="发表于 2023-02-22 09:33:26">2023-02-22</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2023 By Peter Qiu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="/js/timing.js"></script><script src="/js/autoaudio.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="鸡,你,太美" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
