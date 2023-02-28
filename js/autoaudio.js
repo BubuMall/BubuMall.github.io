@@ -7,7 +7,7 @@ $(document).ready(function () {
       $("<source>")
         .attr(
           "src",
-          "https://cdn.jsdelivr.net/gh/BubuMall/Image/nihida_init.mp3"
+          "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3"
         )
         .attr("type", "audio/mpeg")
     );
@@ -20,7 +20,7 @@ $(document).ready(function () {
   var audioLinks = [
     "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3",
     "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_chat.mp3",
-    "https://cdn.jsdelivr.net/gh/BubuMall/Image/nihida_wait.mp3",
+    "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_wait.mp3",
   ];
   var audioIndex = 0;
 
