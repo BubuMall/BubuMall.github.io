@@ -7,7 +7,7 @@ $(document).ready(function () {
       $("<source>")
         .attr(
           "src",
-          "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3"
+          "./sound/初次见面.mp3"
         )
         .attr("type", "audio/mpeg")
     );
@@ -18,8 +18,8 @@ $(document).ready(function () {
 
   // 定义音频链接数组和索引
   var audioLinks = [
-    "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_init.mp3",
-    "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_chat.mp3",
+    "./sound/初次见面.mp3",
+    "./sound/nahida_wait.mp3",
     "https://cdn.jsdelivr.net/gh/BubuMall/Image/audio/nahida_wait.mp3",
   ];
   var audioIndex = 0;
