@@ -7,7 +7,7 @@ $(document).ready(function () {
         $("<source>")
           .attr(
             "src",
-            "./sound/nanida_chat.mp3"
+            "./sound/nahida_chat.mp3"
           )
           .attr("type", "audio/mpeg")
       );
@@ -19,7 +19,7 @@ $(document).ready(function () {
     // 定义音频链接数组和索引
     var audioLinks = [
       "./sound/nahida_init.mp3",
-      "./sound/nanida_chat.mp3",
+      "./sound/nahida_chat.mp3",
       "./sound/nahida_wait.mp3",
     ];
     var audioIndex = 0;
