@@ -1,4 +1,4 @@
-let oSpan = document.getElementsByTagName("timing")[0];
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>let oSpan = document.getElementsByTagName("timing")[0];
 let localhostTime = new Date();//获取页面打开的时间
 function tow(n) {
     return n >= 0 && n < 10 ? '0' + n : '' + n;

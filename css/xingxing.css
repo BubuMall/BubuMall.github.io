@@ -1,4 +1,4 @@
-/* 鼠标样式 */
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>/* 鼠标样式 */
 html,
 body {
     cursor: url(./mouse/STMC_GenshinNahida_01_Normal\(alternative\).cur), default;
