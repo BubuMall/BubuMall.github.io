@@ -47,4 +47,25 @@ $(document).ready(function () {
         audio.pause();
       }
     });
+
+    // 5 分钟无操作自动播放等待音频
+    var timeout = null;
+    function resetTimeout() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        // 如果当前不是等待音频，则切换到等待音频
+        if (audioIndex < audioLinks.length - 1) {
+          hasEnded = false;
+          audioIndex = audioLinks.length - 1;
+          audio.src = audioLinks[audioIndex];
+          audio.play();
+        }
+      }, 5 * 60 * 1000); // 5 分钟
+    }
+
+    // 初始化并开始监听
+    resetTimeout();
+    $(document).on("mousemove keypress click scroll", function () {
+      resetTimeout();
+    });
   });
