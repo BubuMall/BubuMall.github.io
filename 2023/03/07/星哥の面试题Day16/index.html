@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>星哥の面试题Day16 | 很嗯哼的星</title><meta name="author" content="Peter Qiu"><meta name="copyright" content="Peter Qiu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="面试题系列均来自鱼皮的知识星球——编程导航 什么是箭头函数？能使用 new 来创建箭头函数么？箭头函数是 ES6 中新增的一种函数定义方式，可以用来简化函数的定义和书写。箭头函数的特点是：简洁的语法、绑定 this 关键字、不能用作构造函数。 箭头函数使用箭头（&#x3D;&gt;）来定义，基本语法如下： 1(parameters) &#x3D;&gt; &amp;#123; statements &amp;#125;  其中，pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="星哥の面试题Day16">
+<meta property="og:url" content="https://bubumall.github.io/2023/03/07/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day16/index.html">
+<meta property="og:site_name" content="很嗯哼的星">
+<meta property="og:description" content="面试题系列均来自鱼皮的知识星球——编程导航 什么是箭头函数？能使用 new 来创建箭头函数么？箭头函数是 ES6 中新增的一种函数定义方式，可以用来简化函数的定义和书写。箭头函数的特点是：简洁的语法、绑定 this 关键字、不能用作构造函数。 箭头函数使用箭头（&#x3D;&gt;）来定义，基本语法如下： 1(parameters) &#x3D;&gt; &amp;#123; statements &amp;#125;  其中，pa">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bubumall.github.io/img/a_bg3.jpg">
+<meta property="article:published_time" content="2023-03-07T06:10:57.000Z">
+<meta property="article:modified_time" content="2023-03-09T13:53:01.667Z">
+<meta property="article:author" content="Peter Qiu">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="求职">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bubumall.github.io/img/a_bg3.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://bubumall.github.io/2023/03/07/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day16/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Peter Qiu","link":"链接: ","source":"来源: 很嗯哼的星","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '星哥の面试题Day16',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-09 21:53:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/xingxing.css"><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-video"></i><span> 我的项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../img/a_bg3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="很嗯哼的星"><span class="site-name">很嗯哼的星</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-video"></i><span> 我的项目</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">星哥の面试题Day16</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-07T06:10:57.000Z" title="发表于 2023-03-07 14:10:57">2023-03-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-09T13:53:01.667Z" title="更新于 2023-03-09 21:53:01">2023-03-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="星哥の面试题Day16"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><em>面试题系列均来自鱼皮的知识星球——<a target="_blank" rel="noopener" href="https://t.zsxq.com/0b6WUnJog">编程导航</a></em></p>
+<h2 id="什么是箭头函数？能使用-new-来创建箭头函数么？"><a href="#什么是箭头函数？能使用-new-来创建箭头函数么？" class="headerlink" title="什么是箭头函数？能使用 new 来创建箭头函数么？"></a>什么是箭头函数？能使用 new 来创建箭头函数么？</h2><p>箭头函数是 ES6 中新增的一种函数定义方式，可以用来简化函数的定义和书写。箭头函数的特点是：简洁的语法、绑定 this 关键字、不能用作构造函数。</p>
+<p>箭头函数使用箭头（=&gt;）来定义，基本语法如下：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">parameters</span>) =&gt; &#123; statements <span class="comment">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，parameters 是函数的参数列表，可以是一个或多个参数，多个参数之间用逗号分隔；statements 是函数的执行语句，可以是一个或多个语句，多个语句之间用花括号包裹起来。</p>
+<p><strong>在箭头函数中，this 关键字指向的是函数定义时所在的对象，而不是执行时所在的对象。这个特性有助于避免 this 的指向问题，使得代码更加简洁易读。</strong></p>
+<p>需要注意的是，箭头函数不能用作构造函数，也就是不能通过 new 关键字来创建实例。因为箭头函数没有自己的 this，而是继承了外层作用域的 this。如果用 new 来创建实例，就会出现意料之外的结果。</p>
+<h2 id="什么是-webpack-的热更新？它的实现原理是什么？"><a href="#什么是-webpack-的热更新？它的实现原理是什么？" class="headerlink" title="什么是 webpack 的热更新？它的实现原理是什么？"></a>什么是 webpack 的热更新？它的实现原理是什么？</h2><p>webpack 的热更新（Hot Module Replacement，简称 HMR）是一种开发时提高开发效率的技术，可以实现无需刷新页面即可看到代码修改后的效果。在使用 HMR 后，当修改了代码后，webpack 只会重新编译修改的代码，并将新的模块发送到客户端，替换掉旧的模块，从而达到实时更新页面的目的。</p>
+<p>实现 HMR 的关键是在客户端和服务器端之间建立一个 WebSocket 连接，当代码发生变化时，服务器端会将新的模块发送给客户端，客户端接收到新的模块后会用新模块替换旧模块，从而实现实时更新。</p>
+<p>具体来说，webpack HMR 主要分为以下几个步骤：</p>
+<ol>
+<li>启动 webpack-dev-server，配置 HMR 插件</li>
+<li>当代码变化时，webpack-dev-server 会编译出新的模块</li>
+<li>HMR runtime（客户端运行时）会通过 WebSocket 与服务器通信，获取最新的模块</li>
+<li>当 HMR runtime 接收到新模块时，会将新模块加载到浏览器中，并通过模块热替换算法将新模块与旧模块进行比较，只替换有变化的模块部分</li>
+<li>页面更新完成，无需刷新页面即可看到最新的效果。</li>
+</ol>
+<p>总之，HMR 可以大大提高开发效率，同时也能够减少代码变更时的刷新操作，提高开发体验。</p>
+<h2 id="说说常规的前端性能优化手段"><a href="#说说常规的前端性能优化手段" class="headerlink" title="说说常规的前端性能优化手段"></a>说说常规的前端性能优化手段</h2><p>常见的前端性能优化手段有以下几种：</p>
+<ol>
+<li><strong>DNS 优化</strong>：避免浏览器并发数限制，将HTML/CSS/JS，jpg/png，api 接口等不同资源放在不同域名下，从而减少DNS的请求次数；DNS 预解析。</li>
+<li><strong>CDN 回源</strong>：回源指浏览器访问CDN集群上静态文件时，文件缓存过期，直接穿透 CDN 集群而访问源站机器的行为。</li>
+<li><strong>浏览器缓存优化</strong>：IndexDB、cookie、localStorage、sessionstorage。</li>
+<li><strong>HTML5 离线化：</strong>通过选用不同的离线包类型<ul>
+<li>全局离线包：包含公共的资源，可供多个应用共同使用</li>
+<li>私有离线包：只可以被某个应用单独使用</li>
+</ul>
+</li>
+<li><strong>接口优化</strong>：<ul>
+<li>接口合并：减少http请求</li>
+<li>接口上 CDN：把不需要实时更新的接口同步到CDN，如果接口数据更新再重新同步 CDN</li>
+<li>接口域名上 CDN：增强可用性，稳定性</li>
+<li>合理使用缓存：异步接口数据优先使用本地 localstorage 中的缓存数据，通过 md5 判断是否需要数据更新</li>
+</ul>
+</li>
+<li><strong>页面加载策略优化：</strong><ul>
+<li>网络请求优化：减少网络资源的请求和加载耗时<ul>
+<li>预加载</li>
+<li>开启GZIP</li>
+<li>预渲染：可以让浏览器提前加载指定页面的所有资源。</li>
+<li>使用 HTTP/2、HTTP/3提升资源请求速度</li>
+<li>资源请求合并，减少http请求</li>
+<li>合理使用defer，async</li>
+</ul>
+</li>
+<li>首屏加载优化<ul>
+<li>对页面内容进行分片/分屏加载</li>
+<li>懒加载：监听scroll事件；使用IntersectionObserver</li>
+<li>首屏只加载需要的资源，对于不需要的资源不加载。</li>
+<li>客户端离线包方案</li>
+<li>客户端进行预请求和预加载</li>
+</ul>
+</li>
+<li>渲染过程优化：减少用户操作等待时间<ul>
+<li>按需加载</li>
+<li>减少回流和重绘</li>
+<li>减少/合并dom操作，减少浏览器的计算损耗</li>
+</ul>
+</li>
+<li>浏览器运算逻辑优化<ul>
+<li>拆解长任务，避免出现长时间计算导致页面卡顿</li>
+<li>提前将计算结果缓存</li>
+</ul>
+</li>
+<li>关键渲染路径优化：关键渲染路径是指浏览器将HTML，CSS，JavaScript转换为屏幕上所呈现的实际像素这期间所经历的一系列步骤。<ul>
+<li>CSS 的 <code>&lt;link&gt;</code> 标签放在 <code>&lt;head&gt;&lt;/head&gt;</code> 之间</li>
+<li><code>&lt;script&gt;</code> 标签放在 <code> &lt;/body&gt;</code> 之前</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>页面静态化（SSR）</strong></li>
+<li><strong>图片优化</strong>：选择合适的图片格式。</li>
+<li><strong>HTML代码优化：</strong><ul>
+<li>精简HTML代码：减少HTML的嵌套；减少DOM节点数；减少无语义代码；删除多余的空格、换行符、缩进等等</li>
+<li>文件放在合适位置：CSS 样式文件链接尽量放在页面头部；JS 放在HTML底部</li>
+</ul>
+</li>
+<li><strong>CSS 代码优化：</strong><ul>
+<li>提升文件加载性能：使用外链的 CSS；尽量避免使用 @import，@import影响css文件的加载速度</li>
+<li>精简 CSS 代码：利用CSS继承减少代码量；避免使用复杂的选择器，层级越少越好</li>
+</ul>
+</li>
+<li><strong>字体文件优化</strong>：<ul>
+<li>使用cdn加载字体文件</li>
+<li>开启gzip压缩字体文件</li>
+<li>通过font-display来调整加载顺序</li>
+<li>字体裁剪，剔除不需要使用到的字体</li>
+<li>内联字体</li>
+</ul>
+</li>
+<li><strong>JS 代码优化</strong>：<ul>
+<li>提升 JS 文件加载性能：JS 文件放在body 底部；合并js文件；合理使用defer和async</li>
+<li>JS 变量和函数优化：尽量使用 id 选择器；尽量避免使用 eval；js 函数尽可能保持整洁；使用节流、防抖函数；使用事件委托</li>
+<li>JS 动画优化：避免添加大量 js 动画；尽量使用 css3 动画；尽量使用 Canvas 动画；使用 <code>requestAnimationFrame</code> 代替 <code>settimeout</code> 和 <code>setinterval</code>。</li>
+</ul>
+</li>
+<li><strong>webpack 打包优化</strong></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://bubumall.github.io">Peter Qiu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://bubumall.github.io/2023/03/07/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day16/">https://bubumall.github.io/2023/03/07/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day16/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://bubumall.github.io" target="_blank">很嗯哼的星</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a><a class="post-meta__tags" href="/tags/%E6%B1%82%E8%81%8C/">求职</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="/../img/a_bg3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/09/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day17/" title="星哥の面试题Day17"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">星哥の面试题Day17</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/06/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day15/" title="星哥の面试题Day15"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">星哥の面试题Day15</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/02/22/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day1/" title="星哥の面试题Day1"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-22</div><div class="title">星哥の面试题Day1</div></div></a></div><div><a href="/2023/03/01/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day10/" title="星哥の面试题Day10"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg4.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-01</div><div class="title">星哥の面试题Day10</div></div></a></div><div><a href="/2023/03/01/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day11/" title="星哥の面试题Day11"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-01</div><div class="title">星哥の面试题Day11</div></div></a></div><div><a href="/2023/03/04/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day12/" title="星哥の面试题Day12"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-04</div><div class="title">星哥の面试题Day12</div></div></a></div><div><a href="/2023/03/05/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day13/" title="星哥の面试题Day13"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-05</div><div class="title">星哥の面试题Day13</div></div></a></div><div><a href="/2023/03/06/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day14/" title="星哥の面试题Day14"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-06</div><div class="title">星哥の面试题Day14</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.rmb.bdstatic.com/bjh/events/87dcca57d56bfacbdaf529de3cc8a1da.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Peter Qiu</div><div class="author-info__description">true</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/whatqiu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn"></i><span>公告</span></div><div class="announcement_content">有大家在,伤口就不会痛</div><timing></timing></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%EF%BC%9F%E8%83%BD%E4%BD%BF%E7%94%A8-new-%E6%9D%A5%E5%88%9B%E5%BB%BA%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是箭头函数？能使用 new 来创建箭头函数么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-webpack-%E7%9A%84%E7%83%AD%E6%9B%B4%E6%96%B0%EF%BC%9F%E5%AE%83%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">什么是 webpack 的热更新？它的实现原理是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%B8%B8%E8%A7%84%E7%9A%84%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5"><span class="toc-number">3.</span> <span class="toc-text">说说常规的前端性能优化手段</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day22/" title="星哥の面试题Day22"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星哥の面试题Day22"/></a><div class="content"><a class="title" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day22/" title="星哥の面试题Day22">星哥の面试题Day22</a><time datetime="2023-03-13T11:46:47.000Z" title="发表于 2023-03-13 19:46:47">2023-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day21/" title="星哥の面试题Day21"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星哥の面试题Day21"/></a><div class="content"><a class="title" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day21/" title="星哥の面试题Day21">星哥の面试题Day21</a><time datetime="2023-03-13T11:46:43.000Z" title="发表于 2023-03-13 19:46:43">2023-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day20/" title="星哥の面试题Day20"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星哥の面试题Day20"/></a><div class="content"><a class="title" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day20/" title="星哥の面试题Day20">星哥の面试题Day20</a><time datetime="2023-03-13T11:46:26.000Z" title="发表于 2023-03-13 19:46:26">2023-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day19/" title="星哥の面试题Day19"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星哥の面试题Day19"/></a><div class="content"><a class="title" href="/2023/03/13/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day19/" title="星哥の面试题Day19">星哥の面试题Day19</a><time datetime="2023-03-13T11:46:18.000Z" title="发表于 2023-03-13 19:46:18">2023-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/09/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day18/" title="星哥の面试题Day18"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/a_bg1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="星哥の面试题Day18"/></a><div class="content"><a class="title" href="/2023/03/09/%E6%98%9F%E5%93%A5%E3%81%AE%E9%9D%A2%E8%AF%95%E9%A2%98Day18/" title="星哥の面试题Day18">星哥の面试题Day18</a><time datetime="2023-03-09T13:41:24.000Z" title="发表于 2023-03-09 21:41:24">2023-03-09</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2023 By Peter Qiu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2022136790号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="/js/xingxing.js"></script><script src="/js/timing.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="鸡,你,太美" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
