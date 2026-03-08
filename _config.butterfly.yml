@@ -3,17 +3,17 @@
 # --------------------------------------
 
 menu:
-  #搜索：/search/ || fas fa-search
+  #搜索: /search/ || fas fa-search
   主页: / || fas fa-home
   时间轴: /archives/ || fas fa-archive
-  文章: /categories/ || fas fa-folder-open
-  标签: /tags/ || fas fa-tags
-      #分类：/class/ || fas fa-folder-open
+  文章|| fas fa-folder-open:
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
   照片: /gallery/ || fas fa-images
-  #List||fas fa-list
-  #Music: /music/ || fas fa-music
-  #Movie: /movies/ || fas fa-video
-  链接: /link/ || fas fa-link
+  #列表||fas fa-list
+  链接|| fas fa-link:
+    音乐: /music/ || fas fa-music
+    我的项目: / || fas fa-video
   关于: /about/ || fas fa-heart
 
 nav:
@@ -43,8 +43,10 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://github.com/BubuMall || GitHub
+  fas fa-envelope: mailto:qiu_xing11617@163.com || Email
+  fab fa-linkedin: https://www.linkedin.com/in/peter-qiu || LinkedIn
+  fas fa-briefcase: /about/ || 招聘信息
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -58,8 +60,8 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
-  preload: true
+  enable: true
+  preload: false
   CDN:
 
 # Math (數學)
@@ -105,7 +107,7 @@ archive_img:
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img:
+tag_img: /img/tag_bg.jpg
 
 # The banner image of tag page
 # format:
@@ -114,7 +116,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img:
+category_img: /img/bg2.jpg
 
 # The banner image of category page
 # format:
@@ -131,7 +133,11 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-     #- https://b0.bdstatic.com/ugc/Qj1WIULnsoXfr2S883-VQgf789a813e917c38eda9655de6c71877c.jpg
+     - '../img/a_bg1.jpg'
+     - '../img/a_bg2.jpg'
+     - '../img/a_bg3.jpg'
+     - '../img/a_bg4.jpg'
+     
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -435,8 +441,10 @@ footer:
   owner:
     enable: true
     since: 2023
-  custom_text: ''
+  custom_text: <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023129115号</a><br><a href="https://icp.gov.moe/?keyword=20238820 " target="_blank">萌ICP备20238820号</a>
+
   copyright: true # Copyright of theme and framework
+  
 
 # Analysis
 # --------------------------------------
@@ -523,7 +531,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: url(https://cdn.jsdelivr.net/gh/BubuMall/Image/202302270119026.jpg)
+background: url(../img/nahida.jpg)
 
 # Footer Background
 footer_bg: 'transparent'
@@ -826,8 +834,8 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
-  per_page: true
+  enable: true
+  per_page: false
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
@@ -836,7 +844,7 @@ aplayerInject:
 snackbar:
   enable: false
   position: bottom-left
-  bg_light: '##248064' # The background color of Toast Notification in light mode
+  bg_light: '#248064' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
@@ -896,9 +904,8 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
     #JAVASCRIPT
-    #- <script src="/js/xingxing.js"></script>
+      - <script src="/js/xingxing.js"></script>
       - <script src="/js/timing.js"></script>
-      - <script src="/js/autoaudio.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

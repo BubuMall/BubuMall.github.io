@@ -5,6 +5,8 @@ tags:
   - 面试题
   - 求职	
   - 前端
+categories:
+  - 技术
 ---
 
 *面试题系列均来自鱼皮的知识星球——[编程导航](https://t.zsxq.com/0b6WUnJog)*

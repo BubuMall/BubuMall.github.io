@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: '很嗯哼的星'
-subtitle: ''
-description: 'Just for Fun'
-keywords: 'key words'
+title: '星Blog - Peter Qiu 的技术博客'
+subtitle: '分享技术，共同成长 | 招聘信息'
+description: 'Peter Qiu 的个人技术博客，分享前端开发、面试题、技术教程和招聘需求。涵盖Web开发、系统设计等领域的深度文章。'
+keywords: '前端开发,JavaScript,Vue,React,面试题,招聘,技术博客,Peter Qiu'
 author: Peter Qiu
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -32,6 +32,12 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+# search
+search:
+  path: search.xml
+  field: post
+  content: true
+  #template: ./search.xml
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -43,7 +49,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -77,6 +83,26 @@ tag_map:
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
 
+# SEO Optimization
+## Open Graph tags for social sharing
+open_graph:
+  enable: true
+  title: true
+  type: blog
+  url: true
+  image: true
+  description: true
+  keywords: true
+  author: true
+  twitter_card: summary_large_image
+
+# Performance Optimization
+## Enable gzip compression
+gzip: true
+
+# Generator
+generator: hexo
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -102,6 +128,13 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
@@ -109,3 +142,5 @@ deploy:
   repo: https://github.com/BubuMall/BubuMall.github.io
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
+aplayer:
+  meting: true
