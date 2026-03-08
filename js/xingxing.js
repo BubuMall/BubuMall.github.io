@@ -1,7 +1,7 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>$(document).ready(function () {
+$(document).ready(function () {
     // 获取音频对象
     const audioElement = $("<audio>")
-      .addClass("nahida")
+      // .addClass("nahida")
       .css("display", "none")
       .append(
         $("<source>")
@@ -13,8 +13,8 @@
       );
     // .insertAfter('header');
     $("header").after(audioElement);
-  
-    var audio = $(".nahida")[0];
+
+    var audio = audioElement[0];
   
     // 定义音频链接数组和索引
     var audioLinks = [
@@ -44,24 +44,20 @@
   
       // 切换到下一个音频链接，并自动播放
       audio.src = audioLinks[audioIndex];
-      // audio.play();
+      audio.play();
     }
   
     // 绑定鼠标移动事件，计时5分钟后重新播放音频
     var timeout = null;
-    if (audio.playing) {
-      return;
-    } else {
-      $(document).on("mousemove", function () {
-        clearTimeout(timeout);
-        timeout = setTimeout(function () {
-          audio.currentTime = 0;
-          playNext();
-          audio.play();
-          timeout = null;
-        }, 360000);
-      });
-    }
+    $(document).on("mousemove", function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        audio.currentTime = 0;
+        playNext();
+        audio.play();
+        timeout = null;
+      }, 10000);
+    });
   
   });
   
