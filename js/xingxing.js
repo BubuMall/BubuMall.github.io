@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // 获取音频对象
     const audioElement = $("<audio>")
-      // .addClass("nahida")
       .css("display", "none")
       .append(
         $("<source>")
@@ -11,11 +10,10 @@ $(document).ready(function () {
           )
           .attr("type", "audio/mpeg")
       );
-    // .insertAfter('header');
     $("header").after(audioElement);
 
     var audio = audioElement[0];
-  
+
     // 定义音频链接数组和索引
     var audioLinks = [
       "./sound/nahida_init.mp3",
@@ -23,41 +21,30 @@ $(document).ready(function () {
       "./sound/nahida_wait.mp3",
     ];
     var audioIndex = 0;
-  
+    var hasEnded = false;
+
+    // 设置初始音频
+    audio.src = audioLinks[audioIndex];
+
+    // 监听音频播放完毕事件
+    audio.addEventListener("ended", function() {
+      hasEnded = true;
+    });
+
     // 点击 header 播放/暂停音频
     $("header").on("click", function () {
-      if (audio.paused) {
-        audio.play(); // 播放音频
-        audio.addEventListener("ended", (e) => {
-          // 监听音频播放完毕事件，播放下一个音频链接
-          playNext();
-        });
+      if (hasEnded && audioIndex < audioLinks.length - 1) {
+        // 播放完毕，切换到下一个音频
+        hasEnded = false;
+        audioIndex++;
+        audio.src = audioLinks[audioIndex];
+        audio.play();
+      } else if (audio.paused) {
+        // 暂停状态，播放当前音频
+        audio.play();
       } else {
-        audio.pause(); // 暂停音频
+        // 播放状态，暂停
+        audio.pause();
       }
     });
-  
-    // 定义播放下一个音频链接函数
-    function playNext() {
-      // 索引加 1，并对链接数量取余，实现循环播放
-      audioIndex = (audioIndex + 1) % audioLinks.length;
-  
-      // 切换到下一个音频链接，并自动播放
-      audio.src = audioLinks[audioIndex];
-      audio.play();
-    }
-  
-    // 绑定鼠标移动事件，计时5分钟后重新播放音频
-    var timeout = null;
-    $(document).on("mousemove", function () {
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
-        audio.currentTime = 0;
-        playNext();
-        audio.play();
-        timeout = null;
-      }, 10000);
-    });
-  
   });
-  
